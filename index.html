@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment Masterpieces - Gabriel Wine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="placeholder-image.webp" alt="Moment Masterpieces Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="section-content">
+                <h2 class="fade-in">Welcome to Moment Masterpieces</h2>
+                <p class="slide-up">Capturing your moments, one masterpiece at a time.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <img src="placeholder-image.webp" alt="Gabriel Wine">
+                    <p>Hello! I'm Gabriel Wine, but you can call me Gabi. I'm an 11-year-old photographer with a passion for capturing life's special moments. Whether it's a birthday party, family gathering, or any event, I bring my creativity and keen eye to turn ordinary events into extraordinary memories. Join me on this journey, and let's create some Moment Masterpieces together!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="section-content">
+                <h2>Portfolio</h2>
+                <div class="gallery">
+                    <img src="placeholder-image.webp" alt="Placeholder Image 1" class="expandable">
+                    <img src="placeholder-image.webp" alt="Placeholder Image 2" class="expandable">
+                    <img src="placeholder-image.webp" alt="Placeholder Image 3" class="expandable">
+                    <img src="placeholder-image.webp" alt="Placeholder Image 4" class="expandable">
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-content">
+                <h2>Services</h2>
+                <p>I offer photography services for various events at $20/hour. Book now to capture your special moments! I specialize in capturing high-quality photos at events such as birthday parties, family reunions, and other celebrations. My goal is to make sure every moment is beautifully documented, providing you with lasting memories.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-content">
+                <h2>Contact</h2>
+                <form id="contact-form" action="https://formsubmit.co/hartleyscales@hms-web-development.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="placeholderthankyou.html">
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+                <div id="form-message" style="display:none; color: green; margin-top: 10px;">Your message has been sent!</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.expandable').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
