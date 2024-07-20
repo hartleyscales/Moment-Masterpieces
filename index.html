@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment Masterpieces - Gabriel Wine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="placeholder-image.webp" alt="Moment Masterpieces Logo">
+                    <img src="logo.png" alt="Moment Masterpieces Logo">
+                    <span class="site-title">Moment Masterpieces</span>
                 </div>
-                <ul class="nav-menu">
+                <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -24,7 +29,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="home" class="hero">
             <div class="section-content">
                 <h2 class="fade-in">Welcome to Moment Masterpieces</h2>
@@ -36,7 +41,7 @@
             <div class="section-content">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <img src="placeholder-image.webp" alt="Gabriel Wine">
+                    <img src="IMG_4941.jpeg" alt="Gabriel Wine">
                     <p>Hello! I'm Gabriel Wine, but you can call me Gabi. I'm an 11-year-old photographer with a passion for capturing life's special moments. Whether it's a birthday party, family gathering, or any event, I bring my creativity and keen eye to turn ordinary events into extraordinary memories. Join me on this journey, and let's create some Moment Masterpieces together!</p>
                 </div>
             </div>
@@ -46,10 +51,13 @@
             <div class="section-content">
                 <h2>Portfolio</h2>
                 <div class="gallery">
-                    <img src="placeholder-image.webp" alt="Placeholder Image 1" class="expandable">
-                    <img src="placeholder-image.webp" alt="Placeholder Image 2" class="expandable">
-                    <img src="placeholder-image.webp" alt="Placeholder Image 3" class="expandable">
-                    <img src="placeholder-image.webp" alt="Placeholder Image 4" class="expandable">
+                    <img src="Gabi1.heic" alt="Image 1" class="expandable">
+                    <img src="Gabi2.heic" alt="Image 2" class="expandable">
+                    <img src="Gabi3.heic" alt="Image 3" class="expandable">
+                    <img src="Gabi4.heic" alt="Image 4" class="expandable">
+                    <img src="Gabi5.heic" alt="Image 5" class="expandable">
+                    <img src="Gabi6.heic" alt="Image 6" class="expandable">
+                    <img src="Gabi7.mov" alt="Image 7" class="expandable">
                 </div>
             </div>
         </section>
@@ -57,7 +65,7 @@
         <section id="services">
             <div class="section-content">
                 <h2>Services</h2>
-                <p>I offer photography services for various events at $20/hour. Book now to capture your special moments! I specialize in capturing high-quality photos at events such as birthday parties, family reunions, and other celebrations. My goal is to make sure every moment is beautifully documented, providing you with lasting memories.</p>
+                <p>I offer photography services for various events at $20/hour. Book now to capture your special moments! I specialize in capturing high-quality photos at events such as birthday parties, family reunions, and other celebrations. My goal is to make sure every moment is beautifully documented, providing you with lasting memories. I use a professional DSLR camera paired with a DJI-brand drone to ensure the best quality photos for all my clients.</p>
             </div>
         </section>
 
