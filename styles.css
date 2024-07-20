@@ -14,14 +14,34 @@ header {
     padding: 1rem 2rem;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+}
+
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
     height: 50px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    color: white;
 }
 
 .nav-menu {
@@ -44,6 +64,12 @@ header {
 
 .nav-menu li a:hover {
     color: #ff6347;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
 }
 
 main {
@@ -237,4 +263,101 @@ form button:hover {
 
 #thank-you .btn:hover {
     background: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero .section-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero .section-content p {
+        font-size: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .site-title {
+        font-size: 1.2rem;
+    }
+
+    .hero .section-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero .section-content p {
+        font-size: 0.9rem;
+    }
+}
+
+#mobile-nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+}
+
+#mobile-nav-menu li {
+    width: 100%;
+}
+
+#mobile-nav-menu li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #333;
+}
+
+#mobile-nav-menu li a:hover {
+    background-color: #575757;
 }
