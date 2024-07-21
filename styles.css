@@ -92,7 +92,7 @@ section {
 
 .hero {
     height: 60vh;
-    background: url('hero.jpeg') no-repeat center center/cover;
+    background: url('Gabi-hero.webp') no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -310,6 +310,9 @@ form button:hover {
     form input, form textarea {
         width: 90%;
     }
+    #shrek-image.show {
+        bottom: -130px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -360,4 +363,20 @@ form button:hover {
 
 #mobile-nav-menu li a:hover {
     background-color: #575757;
+}
+
+#shrek-image {
+    position: fixed;
+    bottom: -227px;
+    right: 10px;
+    width: 150px;
+    transition: bottom 3s;
+}
+
+#shrek-image.hide {
+    transition: bottom 3s;
+}
+
+#shrek-image.show {
+    bottom: -180px;
 }

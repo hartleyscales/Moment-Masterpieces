@@ -41,7 +41,7 @@
             <div class="section-content">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <img src="IMG_4941.jpeg" alt="Gabriel Wine">
+                    <img src="face.png" alt="Gabriel Wine">
                     <p>Hello! I'm Gabriel Wine, but you can call me Gabi. I'm an 11-year-old photographer with a passion for capturing life's special moments. Whether it's a birthday party, family gathering, or any event, I bring my creativity and keen eye to turn ordinary events into extraordinary memories. Join me on this journey, and let's create some Moment Masterpieces together!</p>
                 </div>
             </div>
@@ -65,14 +65,14 @@
         <section id="services">
             <div class="section-content">
                 <h2>Services</h2>
-                <p>I offer photography services for various events at $20/hour. Book now to capture your special moments! I specialize in capturing high-quality photos at events such as birthday parties, family reunions, and other celebrations. My goal is to make sure every moment is beautifully documented, providing you with lasting memories. I use a professional DSLR camera paired with a DJI-brand drone to ensure the best quality photos for all my clients.</p>
+                <p>I offer photography services for various events at $20/hour. Book now to capture your special moments! I specialize in capturing high-quality photos at events such as birthday parties, family reunions, and other celebrations. My goal is to make sure every moment is beautifully documented, providing you with lasting memories. I use a professional DSLR camera to ensure the best quality photos for all my clients.</p>
             </div>
         </section>
 
         <section id="contact">
             <div class="section-content">
                 <h2>Contact</h2>
-                <form id="contact-form" action="https://formsubmit.co/hartleyscales@hms-web-development.com" method="POST">
+                <form id="contact-form" action="https://formsubmit.co/momentmasterpeices@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="thankyou.html">
                     
@@ -92,10 +92,20 @@
         </section>
     </main>
 
+    <ul class="nav-menu" id="mobile-nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+
+    <img src="shrek.png" alt="Shrek" id="shrek-image">
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -125,6 +135,26 @@
         lightbox.addEventListener('click', (e) => {
             if (e.target !== lightboxImg) {
                 lightbox.style.display = 'none';
+            }
+        });
+
+        function toggleMenu() {
+            var x = document.getElementById("mobile-nav-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        window.addEventListener('scroll', function() {
+            var shrekImage = document.getElementById('shrek-image');
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                shrekImage.classList.add('show');
+                shrekImage.classList.remove('hide');
+            } else {
+                shrekImage.classList.add('hide');
+                shrekImage.classList.remove('show');
             }
         });
     </script>
